@@ -18,14 +18,14 @@ if not game:IsLoaded() then
 end
 
 coin_flip=math.random(0, 1)
-thescriptkey1 = "key"
-thescriptkey2 = "key"
+jjkloskl = "thescriptkey1"
+sukmadik = "thescriptkey2"
 
 if coin_flip==0 then
-    script_key=thescriptkey2;
+    script_key=jjkloskl;
 (loadstring or load)(game:HttpGet("https://getnative.cc/script/loader"))()
 else
-    script_key=thescriptkey1;
+    script_key=sukmadik;
 (loadstring or load)(game:HttpGet("https://getnative.cc/script/loader"))()
 end
 
@@ -6364,15 +6364,21 @@ Players.LocalPlayer.OnTeleport:Connect(function(State)
 	if KeepInfYield and (not TeleportCheck) and queueteleport then
 		TeleportCheck = true
 		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()")
-		if coin_flip==0 then
-		script_key=thescriptkey2;
-		queueteleport("(loadstring or load)(game:HttpGet('https://getnative.cc/script/loader'))()")
-		else
-		script_key=thescriptkey1;
-		queueteleport("(loadstring or load)(game:HttpGet('https://getnative.cc/script/loader'))()")
 		end
 	end
 end)
+
+local TeleportCheck = false
+Players.LocalPlayer.OnTeleport:Connect(function(State)
+	if KeepInfYield and (not TeleportCheck) and queueteleport then
+		if coin_flip==0 then
+		TeleportCheck = true
+			queueteleport("script_key=sukmadik;(loadstring or load)(game:HttpGet('https://getnative.cc/script/loader'))()")
+			else
+			queueteleport("script_key=jjkloskl;(loadstring or load)(game:HttpGet('https://getnative.cc/script/loader'))()")
+		end
+	end
+end
 
 addcmd('addalias',{},function(args, speaker)
 	if #args < 2 then return end
