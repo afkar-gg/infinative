@@ -1,5 +1,5 @@
-thescriptkey1 = "key"
-thescriptkey2 = "key"
+thescriptkey1 = "eKIOSHBmPvSQjXpvChIscQvjThAkBqGa"
+thescriptkey2 = "ooaGUehvdVoSOdeqlMYPLhcLjjdULWJb"
 
 coin_flip=math.random(0, 1)
 if coin_flip==0 then
