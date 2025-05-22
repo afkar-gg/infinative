@@ -17,6 +17,18 @@ if not game:IsLoaded() then
     notLoaded:Destroy()
 end
 
+coin_flip=math.random(0, 1)
+thescriptkey1 = "key"
+thescriptkey2 = "key"
+
+if coin_flip==0 then
+    script_key=thescriptkey2;
+(loadstring or load)(game:HttpGet("https://getnative.cc/script/loader"))()
+else
+    script_key=thescriptkey1;
+(loadstring or load)(game:HttpGet("https://getnative.cc/script/loader"))()
+end
+
 currentVersion = "6.3.1"
 
 ScaledHolder = Instance.new("Frame")
@@ -6352,7 +6364,13 @@ Players.LocalPlayer.OnTeleport:Connect(function(State)
 	if KeepInfYield and (not TeleportCheck) and queueteleport then
 		TeleportCheck = true
 		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()")
-		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/afkar-gg/infinative/refs/heads/main/infinative.lua'))()")
+		if coin_flip==0 then
+		script_key=thescriptkey2;
+		queueteleport("(loadstring or load)(game:HttpGet('https://getnative.cc/script/loader'))()")
+		else
+		script_key=thescriptkey1;
+		queueteleport("(loadstring or load)(game:HttpGet('https://getnative.cc/script/loader'))()")
+		end
 	end
 end)
 
